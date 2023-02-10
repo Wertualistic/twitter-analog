@@ -1,0 +1,152 @@
+.app{
+    display: flex;
+    flex-direction: column;
+    width: 850px;
+    height: 550px;
+    background: #fff;
+    margin-top: 100px;
+    padding: 50px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.btn-group{
+    gap: 0px !important;
+}
+
+input{
+    width: 500px;
+}
+
+.app-header{
+    padding-bottom: 30px;
+}
+
+.app-header h1{
+    font-size: 30px;
+}
+
+.app-header h2{
+    font-size: 25px;
+    color: gray;
+}
+
+.search{
+    gap: 20px;
+}
+
+.btn-group{
+    gap: 15px;
+}
+
+.app-list{
+    padding-top: 30px;
+    padding-bottom: 30px;
+    max-height: 250px;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+li{
+    list-style: circle;
+}
+
+.app-list::-webkit-scrollbar{
+    width: 0;
+}
+
+.btn-star{
+    background: none;
+    font-size: 20px;
+    color: #778DA9;
+    border: none;
+    outline: none;
+    transition: .3s ease-in-out;
+}
+
+span{
+    font-size: 20px;
+    transition: .3s ease;
+}
+
+.important span{
+    color: #FFBA08;
+}
+
+.important .btn-star{
+    color: #FFBA08;
+    animation: span;
+    animation-duration: .5s;
+}
+
+.btn-trash{
+    background: #D7F0F1;
+    font-size: 17px;
+    color: #D00000;
+    border: none;
+    outline: none;
+}
+
+.app-list-item{
+    margin-top: 20px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgb(221, 220, 220);
+    border-radius: 5px;
+}
+
+.app-list-item span{
+    cursor: pointer;
+}
+
+.bottom-panel{
+    gap: 15px;
+    padding-top: 30px;
+}
+
+.ri-heart-fill{
+    color: #D00;
+    opacity: 0;
+    visibility: hidden;
+    font-size: 20px;
+}
+
+.like{
+    opacity: 1;
+    visibility: visible;
+    animation: like;
+    animation-duration: .4s;
+}
+
+@keyframes span {
+    0%{
+        transform: rotate(30deg);
+    }
+    25%{
+        transform: rotate(90deg);
+    }
+    50%{
+        transform: rotate(180deg);
+    }75%{
+        transform: scale(2);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes like {
+    0%{
+        transform: scale(2);
+    }
+    25%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
